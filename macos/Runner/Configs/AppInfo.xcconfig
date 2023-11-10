@@ -8,7 +8,7 @@
 PRODUCT_NAME = most_sport
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.mostSport
+PRODUCT_BUNDLE_IDENTIFIER = com.moste.vents.foot
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2023 com.example. All rights reserved.

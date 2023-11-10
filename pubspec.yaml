@@ -38,6 +38,7 @@ dependencies:
   firebase_core: ^2.1.1
   flutter_local_notifications: ^9.8.0+1
   http:
+  lottie: ^1.1.0
   firebase_remote_config: ^4.3.3
   shared_preferences:
   intl:

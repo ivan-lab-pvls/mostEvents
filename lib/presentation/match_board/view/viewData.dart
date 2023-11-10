@@ -2,8 +2,10 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:in_app_review/in_app_review.dart';
 import 'package:intl/intl.dart';
 import 'package:most_sport/presentation/match_board/data/data.dart';
+import 'package:most_sport/presentation/match_board/helpDeskView.dart';
 import 'package:most_sport/presentation/match_board/view/choosedMatchInfo/ChoosedMatchInfo.dart';
 
 class MatchBoardScreen extends StatefulWidget {
@@ -15,6 +17,57 @@ class MatchBoardScreen extends StatefulWidget {
 
 class _MatchBoardScreenState extends State<MatchBoardScreen> {
   final DataRepository dataRepository = DataRepository();
+  void show() {
+    showCupertinoModalPopup(
+        context: context,
+        builder: (BuildContext cont) {
+          return CupertinoActionSheet(
+            actions: [
+              CupertinoActionSheetAction(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HelpDeskView(show: 'https://docs.google.com/document/d/1CnwRrOI6N-aiLvxzBhYhqQBETd6CyLfH0sEwkMR4hVg/edit?usp=sharing',),
+                    ),
+                  );
+                },
+                child: const Text('Privacy Policy'),
+              ),
+              CupertinoActionSheetAction(
+                onPressed: () {
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HelpDeskView(show:'https://docs.google.com/document/d/1mIXnFSDeCL_7DeM4zomzQpXWuG5BBiC8xtDDdGD_Jmc/edit?usp=sharing')));
+                },
+                child: const Text('Terms & Conditions'),
+              ),
+              CupertinoActionSheetAction(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HelpDeskView(show:'https://forms.gle/TENcNfZ7Mu2LfniYA')));
+                },
+                child: const Text('Write Support'),
+              ),
+              CupertinoActionSheetAction(
+                onPressed: () {
+                 InAppReview.instance.openStoreListing(appStoreId: '6471849077',);
+                },
+                child: const Text('Rate application'),
+              )
+            ],
+            cancelButton: CupertinoActionSheetAction(
+              onPressed: () {
+                Navigator.of(cont).pop(); // Call the pop method
+              },
+              child: const Text('Cancel', style: TextStyle(color: Colors.red)),
+            ),
+          );
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -75,9 +128,12 @@ class _MatchBoardScreenState extends State<MatchBoardScreen> {
                           const SizedBox(
                             height: 30,
                           ),
-                          const Icon(
-                            CupertinoIcons.settings_solid,
-                            color: Colors.grey,
+                          InkWell(
+                            onTap: show,
+                            child: const Icon(
+                              CupertinoIcons.settings_solid,
+                              color: Colors.grey,
+                            ),
                           ),
                           const Spacer(),
                           SizedBox(
