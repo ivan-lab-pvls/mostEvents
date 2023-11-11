@@ -65,8 +65,6 @@ class _AddMyMatchPageState extends State<AddMyMatchPage> {
     });
   }
 
-
-
   Future<void> saveMatchesList(List<MatchDetails> matches) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> stringList =
@@ -231,7 +229,7 @@ class _AddMyMatchPageState extends State<AddMyMatchPage> {
                 children: [
                   InkWell(
                     onTap: () {
-                      _pickImage('FirstTeam');
+                      // _pickImage('FirstTeam');
                     },
                     child: Container(
                       height: 35,
@@ -240,11 +238,8 @@ class _AddMyMatchPageState extends State<AddMyMatchPage> {
                         color: const Color.fromARGB(225, 208, 206, 206),
                         borderRadius: BorderRadius.circular(50),
                       ),
-                      child: const Center(
-                        child: Icon(
-                          CupertinoIcons.photo_camera,
-                          size: 20,
-                        ),
+                      child:  Center(
+                        child: Image.asset('assets/images/ball_red.png'),
                       ),
                     ),
                   ),
@@ -253,20 +248,20 @@ class _AddMyMatchPageState extends State<AddMyMatchPage> {
                   ),
                   const Row(
                     children: [
-                      SizedBox(
-                        height: 15,
-                        width: 15,
-                        child: Icon(
-                          CupertinoIcons.cloud_download,
-                          color: Colors.grey,
-                          size: 15,
-                        ),
-                      ),
+                      // SizedBox(
+                      //   height: 15,
+                      //   width: 15,
+                      //   child: Icon(
+                      //     CupertinoIcons.cloud_download,
+                      //     color: Colors.grey,
+                      //     size: 15,
+                      //   ),
+                      // ),
                       SizedBox(
                         width: 5,
                       ),
                       Text(
-                        'Upload logo',
+                        ' ',
                         style: TextStyle(
                             color: Colors.grey,
                             fontWeight: FontWeight.w400,
@@ -309,7 +304,7 @@ class _AddMyMatchPageState extends State<AddMyMatchPage> {
                 children: [
                   InkWell(
                     onTap: () {
-                      _pickImage('SecondTeam');
+                      // _pickImage('SecondTeam');
                     },
                     child: Container(
                       height: 35,
@@ -318,11 +313,8 @@ class _AddMyMatchPageState extends State<AddMyMatchPage> {
                         color: const Color.fromARGB(225, 208, 206, 206),
                         borderRadius: BorderRadius.circular(50),
                       ),
-                      child: const Center(
-                        child: Icon(
-                          CupertinoIcons.photo_camera,
-                          size: 20,
-                        ),
+                      child: Center(
+                        child: Image.asset('assets/images/ball_green.png'),
                       ),
                     ),
                   ),
@@ -331,20 +323,20 @@ class _AddMyMatchPageState extends State<AddMyMatchPage> {
                   ),
                   const Row(
                     children: [
-                      SizedBox(
-                        height: 15,
-                        width: 15,
-                        child: Icon(
-                          CupertinoIcons.cloud_download,
-                          color: Colors.grey,
-                          size: 15,
-                        ),
-                      ),
+                      // SizedBox(
+                      //   height: 15,
+                      //   width: 15,
+                      //   child: Icon(
+                      //     CupertinoIcons.cloud_download,
+                      //     color: Colors.grey,
+                      //     size: 15,
+                      //   ),
+                      // ),
                       SizedBox(
                         width: 5,
                       ),
                       Text(
-                        'Upload logo',
+                        ' ',
                         style: TextStyle(
                             color: Colors.grey,
                             fontWeight: FontWeight.w400,
