@@ -50,11 +50,11 @@ class DefaultFirebaseOptions {
 
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD1KTFx3fQSZ5-f6iNEGKsXLpTObEK-4I0',
-    appId: '1:184161412262:ios:cbca2bef1782c44e578067',
-    messagingSenderId: '184161412262',
-    projectId: 'icechallenge-83379',
-    storageBucket: 'icechallenge-83379.appspot.com',
-    iosBundleId: 'com.icequeen.game.challenge',
+    apiKey: 'AIzaSyCXwZ3EGowMIy1Fbzu3GXwqsoUZueUCsMw',
+    appId: '1:544224318816:ios:0d3d21321cc564201b3a05',
+    messagingSenderId: '544224318816',
+    projectId: 'mostevents-d5324',
+    storageBucket: 'mostevents-d5324.appspot.com',
+    iosBundleId: 'com.moste.vents.foot',
   );
 }
