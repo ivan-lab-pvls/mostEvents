@@ -53,11 +53,11 @@ class MyApp extends StatelessWidget {
                       height: 120,
                     ),
                     Container(
-                      height: MediaQuery.of(context).size.height * .15,
+                      height: MediaQuery.of(context).size.height * .17,
                       width: MediaQuery.of(context).size.width * .75,
                       child: Image.asset(
                         'assets/images/logo.png',
-                        fit: BoxFit.cover,
+                        fit: BoxFit.contain,
                       ),
                     ),
                     const SizedBox(
